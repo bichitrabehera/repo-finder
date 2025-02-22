@@ -1,0 +1,53 @@
+<header class="bg-[#0D1117] border-b border-gray-800 mx-auto text-gray-300 px-5 md: py-4 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-evenly items-center">
+        <!-- Logo or Site Name -->
+        <h1 class="text-xl font-bold">
+            <a href="/">GitHub Repo Finder</a>
+        </h1>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:block">
+            <ul class="flex space-x-6">
+                <li><a href="https://github.com" target="_blank"
+                        class="hover:text-blue-400 transition duration-300">GitHub Home</a></li>
+                <li><a href="https://github.com/explore" target="_blank"
+                        class="hover:text-blue-400 transition duration-300">Explore</a></li>
+                <li><a href="https://github.com/marketplace" target="_blank"
+                        class="hover:text-blue-400 transition duration-300">Marketplace</a></li>
+                <li><a href="https://github.com/pricing" target="_blank"
+                        class="hover:text-blue-400 transition duration-300">Pricing</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuToggle" class="md:hidden text-gray-300 p-2 rounded focus:outline-none">
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- Mobile Sidebar (Initially Hidden) -->
+<div id="mobileMenu" class="fixed top-0 left-0 w-55 h-full bg-[#0D1117] border-r border-gray-800 text-gray-300 p-5 hidden">
+    <button id="closeMenu" class="text-gray-400 text-2xl absolute top-4 right-4">✕</button>
+    <ul class="space-y-4 mt-10">
+        <li><a href="https://github.com" target="_blank"
+                class="block p-2 rounded hover:bg-gray-800 transition duration-300">GitHub Home</a></li>
+        <li><a href="https://github.com/explore" target="_blank"
+                class="block p-2 rounded hover:bg-gray-800 transition duration-300">Explore</a></li>
+        <li><a href="https://github.com/marketplace" target="_blank"
+                class="block p-2 rounded hover:bg-gray-800 transition duration-300">Marketplace</a></li>
+        <li><a href="https://github.com/pricing" target="_blank"
+                class="block p-2 rounded hover:bg-gray-800 transition duration-300">Pricing</a></li>
+    </ul>
+</div>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function () {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    document.getElementById('closeMenu').addEventListener('click', function () {
+        document.getElementById('mobileMenu').classList.add('hidden');
+    });
+</script>

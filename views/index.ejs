@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Finder</title>
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white-900">
+
+    <%- include("partials/header") %> <!-- Include header -->
+
+        <main class="main max-w-4xl mx-auto px-5 p-4 min-h-[70vh] text-gray-300 mt-6">
+            <div class="history flex items-center gap-2 mb-6">
+                <h2 class="text-2xl font-semibold">Search Repositories</h2>
+                <!-- <button class="bg-purple-600 flex justify-self-end text-white text-sm px-3 py-1 rounded hover:bg-blue-700">
+                    <a href="/history">History</a>
+                </button> -->
+            </div>
+
+            <!-- Search Form -->
+            <form id="searchForm" class="flex gap-2 mb-6">
+                <input type="text" id="domainInput" placeholder="Enter domain" class="border p-2 flex-grow">
+                <button type="submit"
+                    class="bg-green-600 text-white px-4 py-2 transition 0.3s hover:bg-blue-700">Search</button>
+            </form>
+            <div class="space-y-4 py-3 text-gray-300 font-bold text-1xl">Search Results</div>
+
+            <!-- Results Container -->
+            <div id="results" class="space-y-4">No Results Yet , please search</div>
+        </main>
+
+        <%- include("partials/footer") %> <!-- Include footer -->
+
+            <script src="/js/script.js"></script>
+</body>
+
+</html>
